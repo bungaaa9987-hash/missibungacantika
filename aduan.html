@@ -1,0 +1,237 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Aduan | Desa Seburing Ilek</title>
+
+<link rel="stylesheet"
+      href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+<div class="logo">
+🌿 Seburing Ilek
+</div>
+
+<div class="menu">
+
+<a href="index.html">
+Beranda
+</a>
+
+<a href="profil.html">
+Profil
+</a>
+
+<a href="keindahan.html">
+Keindahan
+</a>
+
+<a href="potensi.html">
+Potensi
+</a>
+
+<a href="galeri.html">
+Galeri
+</a>
+
+<a href="aduan.html"
+   class="active">
+Aduan
+</a>
+
+</div>
+
+</nav>
+
+
+<section class="page-header">
+
+<div>
+
+<span>
+LAYANAN MASYARAKAT
+</span>
+
+<h1>
+Aduan & Saran
+</h1>
+
+<p>
+Sampaikan saran atau informasi untuk
+kemajuan desa.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+
+<div class="aduan-box">
+
+
+<div class="aduan-info">
+
+<span>
+ADUAN MASYARAKAT
+</span>
+
+<h2>
+Ada yang ingin disampaikan?
+</h2>
+
+<p>
+Silakan tuliskan kritik, saran atau
+informasi yang ingin disampaikan
+untuk Desa Seburing.
+</p>
+
+<div class="contact">
+
+<div>
+📍 Kecamatan Semparuk
+</div>
+
+<div>
+🏛 Kabupaten Sambas
+</div>
+
+<div>
+🌿 Kalimantan Barat
+</div>
+
+</div>
+
+</div>
+
+
+<div class="form-box">
+
+<form
+onsubmit="kirimAduan(event)">
+
+<label>
+Nama
+</label>
+
+<input
+type="text"
+id="nama"
+placeholder="Masukkan nama"
+required>
+
+
+<label>
+Email
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Masukkan email"
+required>
+
+
+<label>
+Aduan / Saran
+</label>
+
+<textarea
+id="pesan"
+rows="6"
+placeholder="Tuliskan aduan atau saran..."
+required></textarea>
+
+
+<button
+type="submit"
+class="btn">
+Kirim Aduan
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<h2>
+🌿 Desa Seburing Ilek
+</h2>
+
+<p>
+Kecamatan Semparuk, Kabupaten Sambas
+</p>
+
+<p class="copyright">
+© 2026 Desa Seburing Ilek
+</p>
+
+</footer>
+
+
+<script>
+
+function kirimAduan(event) {
+
+    event.preventDefault();
+
+    let nama =
+        document.getElementById("nama").value;
+
+    let pesan =
+        document.getElementById("pesan").value;
+
+
+    let nomor =
+        "6282253105283";
+
+
+    let teks =
+        "Halo, saya " +
+        nama +
+        ".%0A%0A" +
+        "Saya ingin menyampaikan:%0A" +
+        pesan;
+
+
+    window.open(
+        "https://wa.me/" +
+        nomor +
+        "?text=" +
+        teks,
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
+```
