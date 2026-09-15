@@ -1,237 +1,148 @@
-
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>Aduan | Desa Seburing Ilek</title>
+    <title>Aduan | Seburing Ilek</title>
 
-<link rel="stylesheet"
-      href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
-
 
 <body>
 
 
-<nav class="navbar">
+<header>
 
-<div class="logo">
-🌿 Seburing Ilek
-</div>
+    <div class="logo">
+        Seburing<span>Ilek</span>
+    </div>
 
-<div class="menu">
+    <nav>
 
-<a href="index.html">
-Beranda
-</a>
+        <a href="index.html">
+            Beranda
+        </a>
 
-<a href="profil.html">
-Profil
-</a>
+        <a href="profil.html">
+            Profil
+        </a>
 
-<a href="keindahan.html">
-Keindahan
-</a>
+        <a href="keindahan.html">
+            Keindahan
+        </a>
 
-<a href="potensi.html">
-Potensi
-</a>
+        <a href="potensi.html">
+            Potensi
+        </a>
 
-<a href="galeri.html">
-Galeri
-</a>
+        <a href="galeri.html">
+            Galeri
+        </a>
 
-<a href="aduan.html"
-   class="active">
-Aduan
-</a>
+        <a href="aduan.html"
+           class="active">
+            Aduan
+        </a>
 
-</div>
+    </nav>
 
-</nav>
+</header>
 
 
-<section class="page-header">
+<section class="page-hero">
 
-<div>
+    <h1>
+        Aduan Masyarakat
+    </h1>
 
-<span>
-LAYANAN MASYARAKAT
-</span>
-
-<h1>
-Aduan & Saran
-</h1>
-
-<p>
-Sampaikan saran atau informasi untuk
-kemajuan desa.
-</p>
-
-</div>
+    <p>
+        Sampaikan saran dan masukan
+    </p>
 
 </section>
 
 
 <section class="section">
 
+    <div class="title">
 
-<div class="aduan-box">
+        <p>LAYANAN</p>
 
+        <h2>
+            Formulir Aduan
+        </h2>
 
-<div class="aduan-info">
-
-<span>
-ADUAN MASYARAKAT
-</span>
-
-<h2>
-Ada yang ingin disampaikan?
-</h2>
-
-<p>
-Silakan tuliskan kritik, saran atau
-informasi yang ingin disampaikan
-untuk Desa Seburing.
-</p>
-
-<div class="contact">
-
-<div>
-📍 Kecamatan Semparuk
-</div>
-
-<div>
-🏛 Kabupaten Sambas
-</div>
-
-<div>
-🌿 Kalimantan Barat
-</div>
-
-</div>
-
-</div>
+    </div>
 
 
-<div class="form-box">
+    <div class="form-box">
 
-<form
-onsubmit="kirimAduan(event)">
+        <label>
+            Nama
+        </label>
 
-<label>
-Nama
-</label>
-
-<input
-type="text"
-id="nama"
-placeholder="Masukkan nama"
-required>
+        <input
+            type="text"
+            placeholder="Masukkan nama">
 
 
-<label>
-Email
-</label>
+        <label>
+            Email
+        </label>
 
-<input
-type="email"
-id="email"
-placeholder="Masukkan email"
-required>
+        <input
+            type="email"
+            placeholder="Masukkan email">
 
 
-<label>
-Aduan / Saran
-</label>
+        <label>
+            Isi Aduan / Saran
+        </label>
 
-<textarea
-id="pesan"
-rows="6"
-placeholder="Tuliskan aduan atau saran..."
-required></textarea>
+        <textarea
+            placeholder="Tuliskan aduan atau saran...">
+        </textarea>
 
 
-<button
-type="submit"
-class="btn">
-Kirim Aduan
-</button>
+        <br><br>
 
-</form>
+        <button
+            class="btn"
+            type="button"
+            onclick="alert('Terima kasih! Aduan kamu sudah diisi.')">
 
-</div>
+            Kirim Aduan
 
-</div>
+        </button>
+
+    </div>
 
 </section>
 
 
 <footer>
 
-<h2>
-🌿 Desa Seburing Ilek
-</h2>
+    <h2>
+        Seburing<span>Ilek</span>
+    </h2>
 
-<p>
-Kecamatan Semparuk, Kabupaten Sambas
-</p>
+    <p>
+        Desa Seburing, Kecamatan Semparuk,
+        Kabupaten Sambas.
+    </p>
 
-<p class="copyright">
-© 2026 Desa Seburing Ilek
-</p>
+    <div class="copyright">
+        © 2026 Seburing Ilek
+    </div>
 
 </footer>
 
 
-<script>
-
-function kirimAduan(event) {
-
-    event.preventDefault();
-
-    let nama =
-        document.getElementById("nama").value;
-
-    let pesan =
-        document.getElementById("pesan").value;
-
-
-    let nomor =
-        "6282253105283";
-
-
-    let teks =
-        "Halo, saya " +
-        nama +
-        ".%0A%0A" +
-        "Saya ingin menyampaikan:%0A" +
-        pesan;
-
-
-    window.open(
-        "https://wa.me/" +
-        nomor +
-        "?text=" +
-        teks,
-        "_blank"
-    );
-
-}
-
-</script>
-
-
 </body>
 </html>
-```
