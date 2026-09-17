@@ -26,7 +26,6 @@ nav {
     box-shadow: 0 2px 15px rgba(0,0,0,.1);
 }
 
-/* LOGO */
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -39,7 +38,6 @@ nav {
     color: #f0a83b;
 }
 
-/* MENU NAVBAR */
 nav ul {
     display: flex;
     list-style: none;
@@ -118,52 +116,6 @@ nav ul li a.active {
 .btn:hover {
     transform: translateY(-3px);
     background: #16805c;
-}
-
-/* PAGE HEADER */
-.page-header {
-    margin-top: 70px;
-    min-height: 330px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    background:
-        linear-gradient(rgba(0,80,55,.7), rgba(0,90,60,.55)),
-        url("img/seburing2.jpg") center/cover;
-}
-
-.page-header h1 {
-    font-size: 52px;
-    margin-bottom: 10px;
-}
-
-.page-header p {
-    font-size: 18px;
-}
-
-/* SECTION */
-section {
-    padding: 80px 8%;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.title small {
-    color: #16805c;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.title h2 {
-    color: #164d3a;
-    font-size: 38px;
-    margin-top: 8px;
 }
 
 /* ADMIN PAGE STYLES */
