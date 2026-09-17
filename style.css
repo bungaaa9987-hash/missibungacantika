@@ -357,3 +357,108 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
+
+
+
+/* ===================================
+   ADMIN PAGE STYLES (Tambahan Baru)
+   =================================== */
+
+/* Container Utama Admin */
+.admin-container {
+    padding-top: 120px; /* Jarak agar tidak tertutup Navbar */
+    padding-bottom: 80px;
+    min-height: 85vh;
+}
+
+/* Header Khusus Admin */
+.admin-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.admin-header h1 {
+    font-size: 36px;
+    color: #164d3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.admin-header p {
+    color: #557067;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* Grid Kartu Admin */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Kartu Admin dengan Sentuhan Warna Indah */
+.admin-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(22, 128, 92, 0.08);
+    border: 1px solid #e1f0e9;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(22, 128, 92, 0.15);
+    border-color: #16805c;
+}
+
+.admin-card .icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.admin-card h3 {
+    color: #164d3a;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.admin-card p {
+    color: #668076;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Tombol Buka di Kartu Admin */
+.btn-admin {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 25px;
+    background: #16805c;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-admin:hover {
+    background: #f0a83b;
+    color: #ffffff;
+}
