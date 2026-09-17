@@ -11,6 +11,13 @@ body {
     color: #243b35;
 }
 
+/* GAMBAR GLOBAL (MEMBANTU AGAR TIDAK HANCUR) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* NAVBAR */
 nav {
     width: 100%;
@@ -48,10 +55,6 @@ nav ul {
     white-space: nowrap;
 }
 
-nav ul li {
-    list-style: none;
-}
-
 nav ul li a {
     text-decoration: none;
     color: #263b34;
@@ -65,7 +68,7 @@ nav ul li a.active {
     color: #16805c;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
     height: 100vh;
     display: flex;
@@ -118,7 +121,92 @@ nav ul li a.active {
     background: #16805c;
 }
 
-/* ADMIN PAGE STYLES */
+/* HEADER HALAMAN */
+.page-header {
+    margin-top: 70px;
+    min-height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    background:
+        linear-gradient(rgba(0,80,55,.7), rgba(0,90,60,.55)),
+        url("img/seburing2.jpg") center/cover;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 16px;
+}
+
+/* SECTION GLOBAL */
+section {
+    padding: 60px 8%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.title small {
+    color: #16805c;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.title h2 {
+    color: #164d3a;
+    font-size: 36px;
+    margin-top: 8px;
+}
+
+/* KEINDAHAN PAGE */
+.keindahan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.img-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 1px solid #e1f0e9;
+}
+
+.img-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.img-caption {
+    padding: 20px;
+}
+
+.img-caption h3 {
+    color: #164d3a;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.img-caption p {
+    color: #557067;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ADMIN PAGE */
 .admin-container {
     padding-top: 120px;
     padding-bottom: 80px;
@@ -161,16 +249,15 @@ nav ul li a.active {
     text-align: center;
     box-shadow: 0 10px 25px rgba(22, 128, 92, 0.08);
     border: 1px solid #e1f0e9;
-    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.3s;
 }
 
 .admin-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(22, 128, 92, 0.15);
-    border-color: #16805c;
 }
 
 .admin-card .icon {
@@ -206,10 +293,9 @@ nav ul li a.active {
 
 .btn-admin:hover {
     background: #f0a83b;
-    color: #ffffff;
 }
 
-/* ADUAN PAGE STYLES */
+/* ADUAN PAGE */
 .aduan-section {
     padding-top: 120px;
     padding-bottom: 80px;
@@ -273,7 +359,6 @@ nav ul li a.active {
     outline: none;
     border-color: #16805c;
     box-shadow: 0 0 0 4px rgba(22, 128, 92, 0.12);
-    background: #ffffff;
 }
 
 .btn-submit {
@@ -291,8 +376,6 @@ nav ul li a.active {
 
 .btn-submit:hover {
     background: #f0a83b;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(240, 168, 59, 0.3);
 }
 
 .info-item {
@@ -345,38 +428,16 @@ footer p {
     opacity: .9;
 }
 
-/* RESPONSIVE TABLET & HP */
-@media(max-width: 1100px) {
-    nav {
-        padding: 15px 4%;
-    }
-    nav ul {
-        gap: 12px;
-    }
-    nav ul li a {
-        font-size: 14px;
-    }
-}
-
+/* RESPONSIVE */
 @media(max-width: 850px) {
-    nav {
-        padding: 15px 5%;
-    }
     nav ul {
         gap: 10px;
         flex-wrap: wrap;
-        justify-content: center;
     }
     nav ul li a {
-        font-size: 11px;
+        font-size: 12px;
     }
     .aduan-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-@media(max-width: 500px) {
-    nav ul {
-        display: none;
     }
 }
