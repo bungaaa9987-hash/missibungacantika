@@ -462,3 +462,138 @@ footer p {
     background: #f0a83b;
     color: #ffffff;
 }
+
+
+
+
+/* ===================================
+   ADUAN PAGE STYLES (Tambahan Baru)
+   =================================== */
+
+/* Section Aduan Layout */
+.aduan-section {
+    padding-top: 120px; /* Jarak agar tidak tertutup Navbar */
+    padding-bottom: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.aduan-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Card Form & Info */
+.aduan-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(22, 128, 92, 0.08);
+    border: 1px solid #e1f0e9;
+}
+
+.aduan-card h3 {
+    color: #164d3a;
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #263b34;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #d1e2db;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #243b35;
+    background: #fdfdfd;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #16805c;
+    box-shadow: 0 0 0 4px rgba(22, 128, 92, 0.12);
+    background: #ffffff;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #16805c;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #f0a83b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(240, 168, 59, 0.3);
+}
+
+/* Informasi Samping (Alur & Kontak) */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item .icon-box {
+    width: 45px;
+    height: 45px;
+    background: #eaf5f0;
+    color: #16805c;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.info-item div h4 {
+    color: #164d3a;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.info-item div p {
+    color: #557067;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive Aduan */
+@media(max-width: 850px) {
+    .aduan-grid {
+        grid-template-columns: 1fr;
+    }
+}
