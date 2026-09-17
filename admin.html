@@ -4,234 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Admin - Desa Seburing Ilek</title>
+    <title>Admin | Desa Seburing Ilek</title>
+
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f4f7fb;
-            color: #333;
-        }
-
-        /* LOGIN */
-        .login-page {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        .admin-container {
+            max-width: 1100px;
+            margin: 40px auto;
             padding: 20px;
         }
 
-        .login-box {
-            width: 100%;
-            max-width: 400px;
-            background: white;
-            padding: 35px;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
-        }
-
-        .login-box h1 {
+        .admin-header {
             text-align: center;
-            color: #1e3c72;
-            margin-bottom: 8px;
+            margin-bottom: 35px;
         }
 
-        .login-box p {
-            text-align: center;
-            color: #777;
-            margin-bottom: 25px;
-        }
-
-        .login-box label {
-            display: block;
-            margin-bottom: 7px;
-            font-weight: bold;
-        }
-
-        .login-box input {
-            width: 100%;
-            padding: 13px;
-            margin-bottom: 18px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            outline: none;
-        }
-
-        .login-box input:focus {
-            border-color: #1e3c72;
-        }
-
-        .login-btn {
-            width: 100%;
-            padding: 13px;
-            border: none;
-            border-radius: 8px;
-            background: #1e3c72;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .login-btn:hover {
-            background: #16305c;
-        }
-
-        #error {
-            color: #d32f2f;
-            text-align: center;
-            margin-top: 15px;
-            display: none;
-        }
-
-        /* DASHBOARD */
-        .dashboard {
-            display: none;
-            min-height: 100vh;
-        }
-
-        .sidebar {
-            width: 250px;
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            background: #1e3c72;
-            color: white;
-            padding: 25px 15px;
-        }
-
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .sidebar a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 13px 15px;
-            margin: 6px 0;
-            border-radius: 8px;
-        }
-
-        .sidebar a:hover {
-            background: rgba(255,255,255,.15);
-        }
-
-        .logout {
-            margin-top: 25px;
-            background: #d32f2f !important;
-            text-align: center;
-        }
-
-        .content {
-            margin-left: 250px;
-            padding: 30px;
-        }
-
-        .content h1 {
-            color: #1e3c72;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: #777;
-            margin-bottom: 25px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,.08);
-        }
-
-        .card h3 {
-            color: #777;
+        .admin-header h1 {
             margin-bottom: 10px;
         }
 
-        .card .number {
-            font-size: 30px;
-            font-weight: bold;
-            color: #1e3c72;
+        .admin-header p {
+            color: #777;
         }
 
-        .menu-section {
-            margin-top: 30px;
+        .admin-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .admin-card {
             background: white;
             padding: 25px;
             border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
         }
 
-        .menu-section h2 {
-            color: #1e3c72;
+        .admin-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .admin-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .admin-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .admin-card p {
+            color: #777;
+            font-size: 14px;
             margin-bottom: 20px;
         }
 
-        .admin-buttons {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .admin-buttons a {
+        .admin-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: #2c7be5;
+            color: white;
             text-decoration: none;
-            padding: 18px;
-            background: #eef3fa;
-            color: #1e3c72;
-            border-radius: 10px;
-            font-weight: bold;
+        }
+
+        .admin-btn:hover {
+            opacity: 0.85;
+        }
+
+        .kembali {
             text-align: center;
+            margin-top: 35px;
         }
 
-        .admin-buttons a:hover {
-            background: #dce7f7;
+        .kembali a {
+            text-decoration: none;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .admin-buttons {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-            }
-
-            .content {
-                margin-left: 0;
-                padding: 20px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .admin-buttons {
+        @media (max-width: 768px) {
+            .admin-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -240,194 +94,136 @@
 
 <body>
 
-<!-- ================= LOGIN ================= -->
+    <!-- NAVBAR -->
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="wilayah.html">Wilayah</a>
+        <a href="penduduk.html">Penduduk</a>
+        <a href="potensi.html">Potensi</a>
+        <a href="budaya.html">Budaya</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="keindahan.html">Keindahan</a>
+        <a href="admin.html">Admin</a>
+    </nav>
 
-<div class="login-page" id="loginPage">
 
-    <div class="login-box">
+    <!-- HALAMAN ADMIN -->
+    <main class="admin-container">
 
-        <h1>Admin Desa</h1>
-        <p>Desa Seburing Ilek</p>
-
-        <label>Username</label>
-        <input
-            type="text"
-            id="username"
-            placeholder="Masukkan username"
-        >
-
-        <label>Password</label>
-        <input
-            type="password"
-            id="password"
-            placeholder="Masukkan password"
-        >
-
-        <button class="login-btn" onclick="login()">
-            Login
-        </button>
-
-        <div id="error">
-            Username atau password salah!
+        <div class="admin-header">
+            <h1>⚙️ Halaman Admin</h1>
+            <p>Kelola informasi Website Desa Seburing Ilek</p>
         </div>
 
-    </div>
 
-</div>
+        <div class="admin-grid">
 
+            <!-- PROFIL -->
+            <div class="admin-card">
+                <div class="admin-icon">👤</div>
 
-<!-- ================= DASHBOARD ================= -->
+                <h3>Profil Desa</h3>
 
-<div class="dashboard" id="dashboard">
+                <p>
+                    Kelola informasi dan profil Desa Seburing Ilek.
+                </p>
 
-    <div class="sidebar">
-
-        <h2>ADMIN DESA</h2>
-
-        <a href="index.html">🏠 Beranda</a>
-        <a href="profil.html">👤 Profil</a>
-        <a href="wilayah.html">🗺️ Wilayah</a>
-        <a href="penduduk.html">👥 Penduduk</a>
-        <a href="potensi.html">🌾 Potensi</a>
-        <a href="budaya.html">🎭 Budaya</a>
-        <a href="galeri.html">🖼️ Galeri</a>
-        <a href="keindahan.html">🌿 Keindahan</a>
-
-        <a href="#" class="logout" onclick="logout()">
-            🚪 Logout
-        </a>
-
-    </div>
-
-
-    <div class="content">
-
-        <h1>Dashboard Admin</h1>
-
-        <p class="subtitle">
-            Selamat datang di halaman administrator Desa Seburing Ilek.
-        </p>
-
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Halaman Website</h3>
-                <div class="number">8</div>
+                <a href="profil.html" class="admin-btn">
+                    Kelola
+                </a>
             </div>
 
-            <div class="card">
-                <h3>Data Penduduk</h3>
-                <div class="number">0</div>
+
+            <!-- WILAYAH -->
+            <div class="admin-card">
+                <div class="admin-icon">🗺️</div>
+
+                <h3>Wilayah</h3>
+
+                <p>
+                    Kelola informasi wilayah dan lokasi desa.
+                </p>
+
+                <a href="wilayah.html" class="admin-btn">
+                    Kelola
+                </a>
             </div>
 
-            <div class="card">
+
+            <!-- PENDUDUK -->
+            <div class="admin-card">
+                <div class="admin-icon">👥</div>
+
+                <h3>Penduduk</h3>
+
+                <p>
+                    Kelola data penduduk Desa Seburing Ilek.
+                </p>
+
+                <a href="penduduk.html" class="admin-btn">
+                    Kelola
+                </a>
+            </div>
+
+
+            <!-- POTENSI -->
+            <div class="admin-card">
+                <div class="admin-icon">🌾</div>
+
                 <h3>Potensi Desa</h3>
-                <div class="number">0</div>
+
+                <p>
+                    Kelola informasi potensi yang dimiliki desa.
+                </p>
+
+                <a href="potensi.html" class="admin-btn">
+                    Kelola
+                </a>
             </div>
 
-            <div class="card">
+
+            <!-- BUDAYA -->
+            <div class="admin-card">
+                <div class="admin-icon">🎭</div>
+
+                <h3>Budaya</h3>
+
+                <p>
+                    Kelola informasi budaya dan tradisi desa.
+                </p>
+
+                <a href="budaya.html" class="admin-btn">
+                    Kelola
+                </a>
+            </div>
+
+
+            <!-- GALERI -->
+            <div class="admin-card">
+                <div class="admin-icon">📸</div>
+
                 <h3>Galeri</h3>
-                <div class="number">0</div>
+
+                <p>
+                    Kelola foto dan dokumentasi desa.
+                </p>
+
+                <a href="galeri.html" class="admin-btn">
+                    Kelola
+                </a>
             </div>
 
         </div>
 
 
-        <div class="menu-section">
-
-            <h2>Kelola Website</h2>
-
-            <div class="admin-buttons">
-
-                <a href="profil.html">
-                    👤 Kelola Profil
-                </a>
-
-                <a href="penduduk.html">
-                    👥 Data Penduduk
-                </a>
-
-                <a href="potensi.html">
-                    🌾 Potensi Desa
-                </a>
-
-                <a href="budaya.html">
-                    🎭 Budaya
-                </a>
-
-                <a href="galeri.html">
-                    🖼️ Galeri
-                </a>
-
-                <a href="index.html">
-                    🌐 Lihat Website
-                </a>
-
-            </div>
-
+        <div class="kembali">
+            <a href="index.html" class="admin-btn">
+                ← Kembali ke Beranda
+            </a>
         </div>
 
-    </div>
-
-</div>
-
-
-<script>
-
-function login() {
-
-    const username =
-        document.getElementById("username").value;
-
-    const password =
-        document.getElementById("password").value;
-
-    /*
-       USERNAME DAN PASSWORD ADMIN
-    */
-
-    if (username === "admin" && password === "admin123") {
-
-        document.getElementById("loginPage").style.display = "none";
-
-        document.getElementById("dashboard").style.display = "block";
-
-        localStorage.setItem("adminLogin", "true");
-
-    } else {
-
-        document.getElementById("error").style.display = "block";
-
-    }
-
-}
-
-
-function logout() {
-
-    localStorage.removeItem("adminLogin");
-
-    document.getElementById("dashboard").style.display = "none";
-
-    document.getElementById("loginPage").style.display = "flex";
-
-}
-
-
-window.onload = function() {
-
-    if (localStorage.getItem("adminLogin") === "true") {
-
-        document.getElementById("loginPage").style.display = "none";
-
-        document.getElementById("dashboard").style.display = "block";
-
-    }
-
-};
-
-</script>
+    </main>
 
 </body>
 </html>
