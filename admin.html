@@ -9,22 +9,27 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .admin-container {
+        body {
+            background: #f5f7fb;
+        }
+
+        .admin-page {
             max-width: 1100px;
             margin: 40px auto;
             padding: 20px;
         }
 
-        .admin-header {
+        .admin-title {
             text-align: center;
             margin-bottom: 35px;
         }
 
-        .admin-header h1 {
-            margin-bottom: 10px;
+        .admin-title h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
         }
 
-        .admin-header p {
+        .admin-title p {
             color: #777;
         }
 
@@ -40,15 +45,15 @@
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
+            transition: .3s;
         }
 
         .admin-card:hover {
             transform: translateY(-5px);
         }
 
-        .admin-icon {
-            font-size: 40px;
+        .admin-card .icon {
+            font-size: 42px;
             margin-bottom: 15px;
         }
 
@@ -59,32 +64,47 @@
         .admin-card p {
             color: #777;
             font-size: 14px;
+            line-height: 1.6;
             margin-bottom: 20px;
         }
 
         .admin-btn {
             display: inline-block;
             padding: 10px 20px;
-            border-radius: 8px;
-            background: #2c7be5;
+            background: #2563eb;
             color: white;
             text-decoration: none;
+            border-radius: 8px;
         }
 
         .admin-btn:hover {
-            opacity: 0.85;
+            background: #1d4ed8;
         }
 
-        .kembali {
-            text-align: center;
-            margin-top: 35px;
+        .aduan-box {
+            margin-top: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
-        .kembali a {
-            text-decoration: none;
+        .aduan-box h2 {
+            margin-bottom: 10px;
         }
 
-        @media (max-width: 768px) {
+        .aduan-box p {
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 800px) {
+            .admin-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
             .admin-grid {
                 grid-template-columns: 1fr;
             }
@@ -104,123 +124,108 @@
         <a href="budaya.html">Budaya</a>
         <a href="galeri.html">Galeri</a>
         <a href="keindahan.html">Keindahan</a>
+        <a href="aduan.html">Aduan</a>
         <a href="admin.html">Admin</a>
     </nav>
 
 
-    <!-- HALAMAN ADMIN -->
-    <main class="admin-container">
+    <main class="admin-page">
 
-        <div class="admin-header">
-            <h1>⚙️ Halaman Admin</h1>
-            <p>Kelola informasi Website Desa Seburing Ilek</p>
+        <div class="admin-title">
+            <h1>⚙️ Admin Desa</h1>
+            <p>Panel pengelolaan Website Desa Seburing Ilek</p>
         </div>
 
 
         <div class="admin-grid">
 
-            <!-- PROFIL -->
             <div class="admin-card">
-                <div class="admin-icon">👤</div>
-
+                <div class="icon">👤</div>
                 <h3>Profil Desa</h3>
-
                 <p>
-                    Kelola informasi dan profil Desa Seburing Ilek.
+                    Melihat dan mengelola informasi profil desa.
                 </p>
-
                 <a href="profil.html" class="admin-btn">
-                    Kelola
+                    Buka
                 </a>
             </div>
 
 
-            <!-- WILAYAH -->
             <div class="admin-card">
-                <div class="admin-icon">🗺️</div>
-
+                <div class="icon">🗺️</div>
                 <h3>Wilayah</h3>
-
                 <p>
-                    Kelola informasi wilayah dan lokasi desa.
+                    Melihat informasi wilayah Desa Seburing Ilek.
                 </p>
-
                 <a href="wilayah.html" class="admin-btn">
-                    Kelola
+                    Buka
                 </a>
             </div>
 
 
-            <!-- PENDUDUK -->
             <div class="admin-card">
-                <div class="admin-icon">👥</div>
-
+                <div class="icon">👥</div>
                 <h3>Penduduk</h3>
-
                 <p>
-                    Kelola data penduduk Desa Seburing Ilek.
+                    Melihat informasi data penduduk desa.
                 </p>
-
                 <a href="penduduk.html" class="admin-btn">
-                    Kelola
+                    Buka
                 </a>
             </div>
 
 
-            <!-- POTENSI -->
             <div class="admin-card">
-                <div class="admin-icon">🌾</div>
-
-                <h3>Potensi Desa</h3>
-
+                <div class="icon">🌾</div>
+                <h3>Potensi</h3>
                 <p>
-                    Kelola informasi potensi yang dimiliki desa.
+                    Melihat potensi yang dimiliki Desa Seburing Ilek.
                 </p>
-
                 <a href="potensi.html" class="admin-btn">
-                    Kelola
+                    Buka
                 </a>
             </div>
 
 
-            <!-- BUDAYA -->
             <div class="admin-card">
-                <div class="admin-icon">🎭</div>
-
+                <div class="icon">🎭</div>
                 <h3>Budaya</h3>
-
                 <p>
-                    Kelola informasi budaya dan tradisi desa.
+                    Melihat informasi budaya dan tradisi desa.
                 </p>
-
                 <a href="budaya.html" class="admin-btn">
-                    Kelola
+                    Buka
                 </a>
             </div>
 
 
-            <!-- GALERI -->
             <div class="admin-card">
-                <div class="admin-icon">📸</div>
-
+                <div class="icon">📸</div>
                 <h3>Galeri</h3>
-
                 <p>
-                    Kelola foto dan dokumentasi desa.
+                    Melihat dokumentasi dan foto Desa Seburing Ilek.
                 </p>
-
                 <a href="galeri.html" class="admin-btn">
-                    Kelola
+                    Buka
                 </a>
             </div>
 
         </div>
 
 
-        <div class="kembali">
-            <a href="index.html" class="admin-btn">
-                ← Kembali ke Beranda
+        <!-- ADUAN -->
+        <div class="aduan-box">
+
+            <h2>📢 Aduan Masyarakat</h2>
+
+            <p>
+                Lihat halaman pengaduan masyarakat Desa Seburing Ilek.
+            </p>
+
+            <a href="aduan.html" class="admin-btn">
+                Kelola Aduan
             </a>
+
         </div>
 
     </main>
